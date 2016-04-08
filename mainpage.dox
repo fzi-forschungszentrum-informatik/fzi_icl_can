@@ -1,0 +1,12 @@
+/**
+\mainpage
+\htmlinclude manifest.html
+
+This package is a wrapper for the FZI icl can (independent core library). It contains:
+
+\li icl_can
+The library handles everything to do with can communication. It maintains the can devices (PEAK CAN Devices as CHAR DEV only) and low level error handling.
+
+Please see the subsection of the code API for more details.
+
+*/
