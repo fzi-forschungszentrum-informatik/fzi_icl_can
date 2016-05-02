@@ -2,8 +2,8 @@
 Changelog for package fzi_icl_can
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+1.0.2 (2016-05-02)
+------------------
 * declared package as plain cmake package
 * Contributors: Felix Mauch
 
