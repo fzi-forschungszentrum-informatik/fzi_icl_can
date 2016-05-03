@@ -10,3 +10,5 @@ INCLUDE(${ICMAKER_DIRECTORY}/CMakeLists.txt)
 
 ADD_SUBDIRECTORY (src/icl_hardware_can)
 
+# Install catkin package.xml
+install(FILES package.xml DESTINATION share/icl_hardware_can)
