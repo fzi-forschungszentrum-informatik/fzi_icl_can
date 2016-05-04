@@ -143,6 +143,7 @@ endmacro(libfind_library)
 #          EXECUTABLES exec1 exec2 ...
 #          HINTS hint1 hint2 ...
 #          HEADER_PATHS path1 path2 ...
+#          HEADER_SUFFIXES path1 path2 ...
 #          LIBRARY_PATHS path1 path2 ...
 #          EXECUTABLE_PATHS path1 path2 ...
 #          DEFINE definition)
@@ -153,6 +154,7 @@ endmacro(libfind_library)
 #  EXECUTABLES      ... Required executables.
 #  HINTS            ... Path prefixes to search under.
 #  HEADER_PATHS     ... Paths where to search headers.
+#  HEADER_SUFFIXES  ... Subfolders in which the headers should be searched
 #  LIBRARY_PATHS    ... Paths where to search libraries.
 #  EXECUTABLE_PATHS ... Paths where to search executables.
 #  DEFINE           ... Name of the preprocessor macro to define if
@@ -179,7 +181,7 @@ endmacro(libfind_library)
 macro(libfind_lib_with_pkg_config)
   # Get all arguments
   parse_arguments(LIBFIND
-    "HEADERS;LIBRARIES;EXECUTABLES;HINTS;HEADER_PATHS;LIBRARY_PATHS;EXECUTABLE_PATHS;DEFINE"
+    "HEADERS;LIBRARIES;EXECUTABLES;HINTS;HEADER_PATHS;HEADER_SUFFIXES;LIBRARY_PATHS;EXECUTABLE_PATHS;DEFINE"
     ""
     ${ARGN})
   list(GET LIBFIND_DEFAULT_ARGS 0 NAME)
@@ -239,7 +241,8 @@ macro(libfind_lib_with_pkg_config)
     unset(LIBFIND_INCLUDE_DIR CACHE)
     find_path(LIBFIND_INCLUDE_DIR
       NAMES ${h}
-      PATHS ${LIBFIND_HEADER_PATHS})
+      PATHS ${LIBFIND_HEADER_PATHS}
+      PATH_SUFFIXES ${LIBFIND_HEADER_SUFFIXES})
     if (LIBFIND_INCLUDE_DIR)
       list(APPEND LIBFIND_FOUND_INCLUDE_DIRS ${LIBFIND_INCLUDE_DIR})
     else ()

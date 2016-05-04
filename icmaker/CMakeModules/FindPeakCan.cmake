@@ -38,6 +38,7 @@ include(LibFindMacros)
 
 libfind_lib_with_pkg_config(PeakCan libpcan
   HEADERS libpcan.h
+  HEADER_SUFFIXES libpcan
   LIBRARIES pcan
   DEFINE _IC_BUILDER_CAN_PEAK_
   )
