@@ -24,6 +24,10 @@ install: $(SOURCE_DIR)/unpacked
 	cp $(SOURCE_DIR)/driver/*.h common/include/libpcan
 	#sed -i '/#include <pcan.h>/c\#include <libpcan/pcan.h>' common/include/libpcan/libpcan.h
 clean:
-	rm -rf common $(SOURCE_DIR) $(TARBALL)
+	rm -rf common/lib/* common/include/libpcan/* $(SOURCE_DIR) $(TARBALL)
+
+  # create dummy files again
+	touch common/include/libpcan/libpcan.h
+	touch common/lib/libpcan.so
 wipe: clean
 	-rm -rf build

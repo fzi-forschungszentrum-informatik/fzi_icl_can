@@ -61,6 +61,7 @@ add_dependencies(pcan copy_pcan06)
 add_dependencies(copy_pcan build_libpcan)
 add_dependencies(copy_pcan0 build_libpcan)
 add_dependencies(copy_pcan06 build_libpcan)
+add_dependencies(icl_hardware_can copy_pcan06)
 
 install(TARGETS pcan
     ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
