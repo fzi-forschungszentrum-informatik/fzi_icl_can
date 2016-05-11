@@ -2,6 +2,11 @@
 Changelog for package fzi_icl_can
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* add popt as a dependency as it is needed for pcan
+* Contributors: Felix Mauch
+
 1.0.6 (2016-05-11)
 ------------------
 * add dummy libpcan files so that findPKG will find the lib.
