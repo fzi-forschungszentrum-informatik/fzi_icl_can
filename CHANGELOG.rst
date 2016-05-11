@@ -2,8 +2,8 @@
 Changelog for package fzi_icl_can
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+1.0.6 (2016-05-11)
+------------------
 * add dummy libpcan files so that findPKG will find the lib.
 * Contributors: Felix Mauch
 
