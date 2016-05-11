@@ -6,9 +6,10 @@ find_package(tinyxml)
 
 # libpcan is installed from ros package.
 # The IC_MAKER requests PeakCan, we help it to find the ROS package version
-string(REPLACE "/share/libpcan/cmake"
-       "" PeakCan_ROOT
-       "common")
+#string(REPLACE "/share/libpcan/cmake"
+#       "" PeakCan_ROOT
+#       "common")
+set(PeakCan_ROOT ${PROJECT_SOURCE_DIR}/common)
 
 find_package( catkin REQUIRED COMPONENTS
   mk
