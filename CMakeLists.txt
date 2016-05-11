@@ -4,11 +4,8 @@ project(fzi_icl_can)
 find_package(icl_core REQUIRED COMPONENTS icl_core_config icl_core_logging icl_core)
 find_package(tinyxml)
 
-# libpcan is installed from ros package.
 # The IC_MAKER requests PeakCan, we help it to find the ROS package version
-#string(REPLACE "/share/libpcan/cmake"
-#       "" PeakCan_ROOT
-#       "common")
+# That's why we copied those two header files in there...
 set(PeakCan_ROOT ${PROJECT_SOURCE_DIR}/common)
 
 find_package( catkin REQUIRED COMPONENTS
@@ -19,12 +16,11 @@ find_package( catkin REQUIRED COMPONENTS
 
 SET(ICMAKER_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/icmaker")
 INCLUDE(${ICMAKER_DIRECTORY}/CMakeLists.txt)
+
+# reset the project name
 project(fzi_icl_can)
 
 ADD_SUBDIRECTORY (src/icl_hardware_can)
-
-# Install catkin package.xml
-#install(FILES package.xml DESTINATION share/icl_hardware_can)
 
 catkin_package(
     INCLUDE_DIRS common/include
@@ -79,12 +75,6 @@ install(PROGRAMS common/lib/libpcan.so common/lib/libpcan.so.0 common/lib/libpca
 install(DIRECTORY common/include/libpcan/
   DESTINATION ${CATKIN_PACKAGE_INCLUDE_DESTINATION}
 )
-
-
-
-
-
-
 
 
 
