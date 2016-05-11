@@ -2,8 +2,8 @@
 Changelog for package fzi_icl_can
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+1.0.5 (2016-05-11)
+------------------
 * build pcan library inside this package and provide a script to build the kernel module
 * Contributors: Felix Mauch
 
