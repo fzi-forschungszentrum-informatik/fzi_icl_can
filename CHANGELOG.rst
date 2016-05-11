@@ -2,6 +2,11 @@
 Changelog for package fzi_icl_can
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* add dummy libpcan files so that findPKG will find the lib.
+* Contributors: Felix Mauch
+
 1.0.5 (2016-05-11)
 ------------------
 * build pcan library inside this package and provide a script to build the kernel module
