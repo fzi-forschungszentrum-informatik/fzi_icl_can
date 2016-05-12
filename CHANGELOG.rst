@@ -2,8 +2,8 @@
 Changelog for package fzi_icl_can
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+1.0.8 (2016-05-12)
+------------------
 * added license information for pcan
 * add wget as build dependency
 * make the package a plain cmake package again
