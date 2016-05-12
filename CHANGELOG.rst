@@ -2,6 +2,13 @@
 Changelog for package fzi_icl_can
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* added license information for pcan
+* add wget as build dependency
+* make the package a plain cmake package again
+* Contributors: Felix Mauch
+
 1.0.7 (2016-05-11)
 ------------------
 * add popt as a dependency as it is needed for pcan
