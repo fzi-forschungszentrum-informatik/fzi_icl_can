@@ -1,7 +1,13 @@
 This package contains the FZI icl_can library wrapped as catkin compliant package.
 It was developed by the the FZI Research Center for Information Technology in Karlsruhe, Germany.
+Also it provides a build script to build the pcan library from peak systems,
+which will then be included in binary releases.
+
+See the website http://www.peak-system.com/fileadmin/media/linux/index.htm
+for details on the pcan library.
 
 The build system "icmaker" is distributed under the BSD License.
 The basis library "icl_can" is distributed under the LGPL license.
+The library "pcan" is distributed under the GPL license
 
 Find the license texts in this folder.
