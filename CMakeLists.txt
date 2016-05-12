@@ -9,9 +9,6 @@ find_package(tinyxml)
 set(PeakCan_ROOT ${PROJECT_SOURCE_DIR}/common)
 
 find_package( catkin REQUIRED COMPONENTS
-  mk
-  roslib
-  rospack
 )
 
 SET(ICMAKER_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/icmaker")

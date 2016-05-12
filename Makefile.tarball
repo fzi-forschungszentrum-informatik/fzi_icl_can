@@ -2,14 +2,16 @@ all: install
 
 PKG_NAME = peak-linux-driver
 PKG_VER = 7.15.2
-TARBALL = build/$(PKG_NAME)-$(PKG_VER).tar.gz
-TARBALL_URL = http://www.peak-system.com/fileadmin/media/linux/files/$(PKG_NAME)-$(PKG_VER).tar.gz
+TARBALL = $(PKG_NAME)-$(PKG_VER).tar.gz
+TARBALL_URL = http://www.peak-system.com/fileadmin/media/linux/files/$(TARBALL)
 SOURCE_DIR = build/$(PKG_NAME)-$(PKG_VER)
-MD5SUM_FILE = $(PKG_NAME)-$(PKG_VER).tar.gz.md5sum
 
-include $(shell rospack find mk)/download_unpack_build.mk
+install:
+  # get sources
+	mkdir -p build
+	mkdir -p $(SOURCE_DIR)
+	cd build && wget $(TARBALL_URL) && tar xfz $(TARBALL)
 
-install: $(SOURCE_DIR)/unpacked
 	# build
 	cd $(SOURCE_DIR)/lib && make NET=NO_NETDEV_SUPPORT
 
@@ -24,7 +26,7 @@ install: $(SOURCE_DIR)/unpacked
 	cp $(SOURCE_DIR)/driver/*.h common/include/libpcan
 	#sed -i '/#include <pcan.h>/c\#include <libpcan/pcan.h>' common/include/libpcan/libpcan.h
 clean:
-	rm -rf common/lib/* common/include/libpcan/* $(SOURCE_DIR) $(TARBALL)
+	rm -rf common/lib/* common/include/libpcan/* $(SOURCE_DIR) build/$(TARBALL)
 
   # create dummy files again
 	touch common/include/libpcan/libpcan.h

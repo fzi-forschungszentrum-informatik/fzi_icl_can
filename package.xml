@@ -41,9 +41,6 @@
   <!--   <test_depend>gtest</test_depend> -->
   <buildtool_depend>catkin</buildtool_depend>
   <build_depend>fzi_icl_core</build_depend>
-  <build_depend>rospack</build_depend>
-  <build_depend>mk</build_depend>
-  <build_depend>roslib</build_depend>
   <build_depend>libpopt-dev</build_depend>
   <run_depend>fzi_icl_core</run_depend>
   <run_depend>catkin</run_depend>
