@@ -2,6 +2,11 @@
 Changelog for package fzi_icl_can
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* reset the project name after including the IcMaker
+* Contributors: Felix Mauch
+
 1.0.8 (2016-05-12)
 ------------------
 * added license information for pcan
