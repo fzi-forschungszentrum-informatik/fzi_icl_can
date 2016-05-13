@@ -2,8 +2,8 @@
 Changelog for package fzi_icl_can
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+1.0.9 (2016-05-13)
+------------------
 * reset the project name after including the IcMaker
 * Contributors: Felix Mauch
 
