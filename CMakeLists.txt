@@ -32,6 +32,9 @@ SET(ICMAKER_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/icmaker")
 INCLUDE(${ICMAKER_DIRECTORY}/CMakeLists.txt)
 ADD_SUBDIRECTORY (src/icl_hardware_can)
 
+# reset the project name as otherwise it would be IcMaker
+project(fzi_icl_can)
+
 # model dependencies
 add_dependencies(copy_pcan build_libpcan)
 add_dependencies(copy_pcan0 build_libpcan)
