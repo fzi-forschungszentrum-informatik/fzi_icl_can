@@ -236,30 +236,31 @@ inline int CanDeviceReceive(tCanDescriptor _can_device, tCanMessage &msg)
         LOGGING_ERROR( CAN, "transmit queue full" << endl);
         return -ENOBUFS;
         break;
-      case CAN_ERR_REGTEST:       // test of controller registers failed
-        LOGGING_ERROR( CAN, "test of controller registers failed" << endl);
-        return -EPROTO;
-        break;
-      case CAN_ERR_NOVXD:         // Win95/98/ME only
-        LOGGING_ERROR( CAN, "NO VXD (win95 issue...)" << endl);
-        return -EPROTO;
-        break;
-      case CAN_ERR_RESOURCE :     // can't create resource
-        LOGGING_ERROR( CAN, "can't create resource" << endl);
-        return -EPROTO;
-        break;
-      case CAN_ERR_ILLPARAMTYPE:  // illegal parameter
-        LOGGING_ERROR( CAN, "illegal parameter" << endl);
-        return -EPROTO;
-        break;
-      case CAN_ERR_ILLPARAMVAL:   // value out of range
-        LOGGING_ERROR( CAN, "value out of range" << endl);
-        return -EPROTO;
-        break;
-      case CAN_ERRMASK_ILLHANDLE: // wrong handle, handle error
-        LOGGING_ERROR( CAN, "wrong handle, handle error" << endl);
-        return -EPROTO;
-        break;
+// TODO: These error codes are defined by the API, but they can never be reached using a one-byte value
+//       case CAN_ERR_REGTEST:       // test of controller registers failed
+//         LOGGING_ERROR( CAN, "test of controller registers failed" << endl);
+//         return -EPROTO;
+//         break;
+//       case CAN_ERR_NOVXD:         // Win95/98/ME only
+//         LOGGING_ERROR( CAN, "NO VXD (win95 issue...)" << endl);
+//         return -EPROTO;
+//         break;
+//       case CAN_ERR_RESOURCE :     // can't create resource
+//         LOGGING_ERROR( CAN, "can't create resoursce" << endl);
+//         return -EPROTO;
+//         break;
+//       case CAN_ERR_ILLPARAMTYPE:  // illegal parameter
+//         LOGGING_ERROR( CAN, "illegal parameter" << endl);
+//         return -EPROTO;
+//         break;
+//       case CAN_ERR_ILLPARAMVAL:   // value out of range
+//         LOGGING_ERROR( CAN, "value out of range" << endl);
+//         return -EPROTO;
+//         break;
+//       case CAN_ERRMASK_ILLHANDLE: // wrong handle, handle error
+//         LOGGING_ERROR( CAN, "wrong handle, handle error" << endl);
+//         return -EPROTO;
+//         break;
       default:
         LOGGING_ERROR( CAN, "Unknown error : "<< pmsg.Msg.DATA[3]  << endl);
         // TODO:
