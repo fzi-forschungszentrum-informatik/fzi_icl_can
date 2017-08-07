@@ -2,6 +2,12 @@
 Changelog for package fzi_icl_can
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* find system tinyxml
+* remove unreachable error codes from parsing
+* Contributors: Felix Mauch
+
 1.0.9 (2016-05-13)
 ------------------
 * reset the project name after including the IcMaker
