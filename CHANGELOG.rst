@@ -2,8 +2,8 @@
 Changelog for package fzi_icl_can
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+1.0.10 (2017-08-07)
+-------------------
 * find system tinyxml
 * remove unreachable error codes from parsing
 * Contributors: Felix Mauch
