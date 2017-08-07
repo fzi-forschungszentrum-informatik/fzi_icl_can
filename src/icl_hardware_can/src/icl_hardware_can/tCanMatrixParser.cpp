@@ -39,8 +39,7 @@
 
 #include <boost/filesystem.hpp>
 #include <map>
-#include <tinyxml/tinystr.h>
-#include <tinyxml/tinyxml.h>
+#include <tinyxml.h>
 
 #ifdef _IC_BUILDER_CANTOOLS_
 extern "C" {
