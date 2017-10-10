@@ -2,6 +2,11 @@
 Changelog for package fzi_icl_can
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Use the libpcan from the ros package
+* Contributors: Felix Mauch
+
 1.0.10 (2017-08-07)
 -------------------
 * find system tinyxml
