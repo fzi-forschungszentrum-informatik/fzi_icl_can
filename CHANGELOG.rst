@@ -2,8 +2,8 @@
 Changelog for package fzi_icl_can
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+1.0.11 (2017-10-10)
+-------------------
 * Use the libpcan from the ros package
 * Contributors: Felix Mauch
 
