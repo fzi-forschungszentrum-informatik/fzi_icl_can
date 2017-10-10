@@ -44,11 +44,13 @@
   <build_depend>libpopt-dev</build_depend>
   <build_depend>wget</build_depend>
   <build_depend>tinyxml</build_depend>
+  <build_depend>libpcan</build_depend>
   <run_depend>fzi_icl_core</run_depend>
   <run_depend>catkin</run_depend>
   <run_depend>linux-headers-generic</run_depend>
   <run_depend>libpopt-dev</run_depend>
   <run_depend>tinyxml</run_depend>
+  <run_depend>libpcan</run_depend>
 
   <!-- The export tag contains other, unspecified, tags -->
   <export>
