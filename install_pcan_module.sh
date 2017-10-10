@@ -4,7 +4,7 @@
 # Note that you need sudo rights to execute this.
 
 PKG_NAME="peak-linux-driver"
-PKG_VER=7.15.2
+PKG_VER=8.3
 
 TARBALL=${PKG_NAME}-${PKG_VER}.tar.gz
 TARBALL_URL=http://www.peak-system.com/fileadmin/media/linux/files/${TARBALL}
